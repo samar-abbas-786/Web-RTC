@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peer Chat</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .video-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      video {
+        width: 400px;
+        height: 300px;
+        background: black;
+        border: 3px solid #ffffff33;
+        border-radius: 15px;
+        object-fit: cover;
+      }
+
+      @media screen and (max-width: 900px) {
+        .video-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        video {
+          width: 90vw;
+          height: auto;
+        }
+      }
+    </style>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="video-container">
+      <video autoplay id="user-1" playsinline></video>
+      <video autoplay id="user-2" playsinline></video>
+    </div>
+  </body>
+</html>
